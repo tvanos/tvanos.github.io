@@ -290,14 +290,14 @@ hr.small {
 /* Call to Action */
 
 .call-to-action h3{
-	font-size: 2.5em;
+	font-size: 2.0em;
 }
 .call-to-action	{
     padding: 5px 0;
 }
 
 .call-to-action .btn {
-    margin: 30px;
+    margin: 20px;
 }
 
 /* Map */

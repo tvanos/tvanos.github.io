@@ -6,6 +6,31 @@
 
 /* Toggle Styles */
 
+.landingPagePic.resize{ 
+	width:50px;
+	height:auto;
+}
+.landingPagePic {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 42px;
+	height: 42px;
+	border-radius: 38px;
+	-webkit-border-radius: 38px;
+	-moz-border-radius: 38px;
+	background: url(../images/Travis_Vanos_Small.JPG) no-repeat;
+	margin-left: auto;
+    margin-right: auto;
+	}
+	
+.navbar-fixed-top .nav {
+    padding: 5px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+	
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -21,12 +46,12 @@
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    left: 150px;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    margin-left: -150px;
     overflow-y: auto;
-    background: #000;
+    background: #000000;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -53,7 +78,7 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 150px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -67,12 +92,12 @@
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: #F8F8F8;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
+    color: rgb(77, 195, 255);
     background: rgba(255,255,255,0.2);
 }
 
@@ -88,14 +113,17 @@
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #999999;
+    color: #F8F8F8;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
+    color: #F8F8F8;
     background: none;
 }
-
+.container-fluid{
+	margin-top:75px;
+	
+}
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
