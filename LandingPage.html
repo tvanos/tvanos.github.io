@@ -44,11 +44,16 @@
                 <a href="#top" onclick = $("#menu-close").click(); >Home</a>
             </li>
             <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Resume</a>
+                <a href="#about" onclick = $("#menu-close").click(); >About</a>
             </li>
             <li>
                 <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
             </li>
+			<li>
+                <a href="#Projects" onclick = $("#menu-close").click(); >Projects</a>
+            </li>
+			<li>
+				<a href="#resume" onclick = $("#menu-close").click(); >Resume<i class="fa fa-download" aria-hidden="true"></i></a>
             <li>
                 <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
             </li>
@@ -76,7 +81,7 @@
                     <h2>Travis Vanos</h2>
 					</p>
                 </div>
-                    <p class="lead">Travis is an IT/GIS professional with over 5 year experience in IT administration, database technologies, software development and infrastructure technologies. Travis is currenty living in
+                    <p class="lead">Is an IT/GIS professional with over 5 year experience in IT administration, database technologies, software development and infrastructure technologies. Travis is currenty living in
 					<del>
 						<span class="light">
 						Toronto <br>
@@ -107,7 +112,7 @@
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
+    <section id="portfolio" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
@@ -124,7 +129,7 @@
                                     <strong>Resume/ Skills</strong>
                                 </h4>
                                 <p>Prior experience, education and technical skills</p>
-                                <a href="#" class="btn btn-light">Go!</a>
+                                <a href="Resume.html" class="btn btn-light">Go!</a>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -189,41 +194,43 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Latest Projects</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View Collection</a>
-                </div>
+					<section id="Projects">
+						<h2>Latest Projects</h2>
+						<hr class="small">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="portfolio-item">
+									<a href="#">
+										<img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="portfolio-item">
+									<a href="#">
+										<img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="portfolio-item">
+									<a href="#">
+										<img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="portfolio-item">
+									<a href="#">
+										<img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- /.row (nested) -->
+						<a href="#" class="btn btn-dark">View Collection</a>
+					</section>
+				</div>
                 <!-- /.col-lg-10 -->
             </div>
             <!-- /.row -->
@@ -232,17 +239,20 @@
     </section>
 
     <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>View Résumé</h3>
-                    <a href="#" class="btn btn-lg btn-light">PDF</a>
-                    <a href="#" class="btn btn-lg btn-dark">DOCX</a>
-                </div>
-            </div>
-        </div>
-    </aside>
+    <section id="resume" class="resume">
+		<aside class="call-to-action bg-primary">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h3>View Résumé</h3>
+						<a href="Resume.html" class="btn btn-sm btn-light"><b>GO!</b></a><br>
+						<a href="#" class="btn btn-lg btn-light">PDF&nbsp&nbsp&nbsp<i class="fa fa-download" aria-hidden="true"></i></a>
+						<a href="#" class="btn btn-lg btn-dark">DOCX&nbsp&nbsp&nbsp<i class="fa fa-download" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</section>
 	<!-- Map -->
 	<section id="contact" class="map">
 		<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5821.820710038914!2d-79.17795448266638!3d43.14841171024075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d35aedd1828bf3%3A0x1df07a0eb699cd79!2s23+Young+Crescent%2C+Niagara-on-the-Lake%2C+ON+L0S+1J0!5e0!3m2!1sen!2sca!4v1460746465917">
