@@ -1,0 +1,92 @@
+FarmID	Address
+1	1067 Niagara Stone Rd, Niagara-On-The-Lake, ON L0S 1J0
+2	4260 Mountainview Rd, Lincoln, ON L0R 1B2
+3	25 Hunter Rd, Grimsby, ON L3M 4A3
+4	1091 Hutchinson Rd, Haldimand, ON N0A 1K0
+5	5172 Green Lane Rd, Lincoln, ON L0R 1B3
+6	500 Glenridge Ave, St. Catharines, ON L2S 3A1
+7	471 Foss Rd, Pelham, ON L0S 1C0
+8	758 Niagara Stone Rd, Niagara-On-The-Lake, ON L0S 1J0
+9	3836 Main St, Lincoln, ON L0R 1S0
+10	1025 York Rd, Niagara-On-The-Lake, ON L0S 1P0
+11	4303 Cherry Ave, Lincoln, ON L0R 1B1
+12	4390 Tufford Rd, Lincoln, ON L0R 1B1
+13	1167 Lakeshore Rd W, St. Catharines, ON L2R 6P9
+14	3850 Aberdeen Rd, Lincoln, ON LOR 1B7
+15	9045 Silver St, West Lincoln, ON L0R 1E0
+16	3753 Quarry Rd, Lincoln, ON L0R 1B2
+17	825 Canboro Rd, Pelham, ON L0S 1C0
+18	1545 Rice Rd, Pelham, ON L0S 1E0
+19	131 River Rd, Haldimand, ON N1A 2W3
+20	111 Garrison Village Dr, Niagara-On-The-Lake, ON L0S1J0
+21	3678 Victoria Ave, Lincoln, ON L0R 2C0
+22	1385 Larkin Rd, Niagara-On-The-Lake, ON L0S 1J0
+23	1267 Niagara Stone Rd, Niagara-On-The-Lake, ON L0S 1T0
+24	3751 King St, Lincoln, ON L0R 2C0
+25	19 Ontario St, Grimsby, ON L3M 3G8
+26	1160 Effingham St, Pelham, ON L0S 1M0
+27	4362 Jordan Rd, Lincoln, ON L0R 1S0
+28	1469 Pelham Rd, St. Catharines, ON L2R 6P7
+29	4152 Locust Lane, Lincoln, ON L0R 1B0
+30	5529 Green Lane Rd, Lincoln, ON L0R 1B3
+31	1249 Niagara Stone Rd, Niagara-On-The-Lake, ON L0S 1J0
+32	4275 Maple Grove Rd, Lincoln, ON L0R 1B1
+33	1374 Port Davidson Rd, West Lincoln, ON L0R 1Y0
+34	2878 Holland Rd, Thorold, ON L0S 1E6
+35	103 Overholt Rd, Pelham, ON L0S 1M0
+36	1320 7 Louth St, St. Catharines, ON L2R 6P9
+37	2145 Niagara Stone Rd, Niagara-On-The-Lake, ON L0S 1J0
+38	1811 Niagara Stone Rd, Niagara-On-The-Lake, ON L0S 1J0
+39	3550 King St, Lincoln, ON L0R 2C0
+40	297 South Service Rd, Grimsby, ON L3M 1Y6
+41	1096 Lakeshore Rd, Niagara-On-The-Lake, ON L0S 1J0
+42	15940 Niagara Pky, Niagara-On-The-Lake, ON L0S 1J0
+43	4701 Ontario St, Lincoln, ON L0R 1B4
+44	450 Queenston Rd, Niagara-On-The-Lake, ON L0S 1J0
+45	4260 King St E, Lincoln, ON L0R 1B0
+46	1909 Effingham St, Pelham, ON L0S 1M0
+47	3930 Cherry Ave, Lincoln, ON L0R 1B1
+48	4016 Mountain St, Lincoln, ON L0R 1B7
+49	135 Taylor Rd, Niagara-On-The-Lake, ON L0S 1J0
+50	5943 Sylvia Pl, Niagara Falls, ON L2G 1S9
+51	6863 Lundys Lane, Niagara Falls, ON L2G 1V7
+52	1090 Lakeshore Rd W, St. Catharines, ON L2R 6P9
+53	911 Lakeshore Rd, Niagara-On-The-Lake, ON L0S 1J0
+54	20 Pelham Town Sq, Pelham, ON L0S 1E0
+55	290 John St E, Niagara-On-The-Lake, ON L0S 1J0
+56	5600 King St W, Lincoln, ON L0R 1B3
+57	171 Metler Rd, Pelham, ON L0S 1M0
+58	1696 Niagara Stone Rd, Niagara-On-The-Lake, ON L0S 1J0
+59	66 Charlotte St, Port Colborne, ON L3K 3C8
+60	672 Lakeshore Rd, Niagara-On-The-Lake, ON L0S 1J0
+61	1366 York Rd, Niagara-On-The-Lake, ON L0S 1P0
+62	131 River Rd, Haldimand, ON N1A 2W3
+63	3900 Cherry Ave, Lincoln, ON L0R 2C0
+64	282 Ridge Rd N, Fort Erie, ON L0S 1N0
+65	4352 Mountainview Rd, Lincoln, ON L0R 1B2
+66	4551 Cherry Ave, Lincoln, ON L0R 1B1
+67	33783 Flanagan Rd, Wainfleet, ON L0S 1V0
+68	2778 Dominion Rd, Fort Erie, ON L0S 1N0
+69	144 Russ Rd, Grimsby, ON L3M 4E7
+70	581 Niagara Stone Rd, Niagara-On-The-Lake, ON L0S 1J0
+71	91 King St, St. Catharines, ON L2R 3H6
+72	1242 Irvine Rd, Niagara-On-The-Lake, ON L0S1J0
+73	2059 Niagara Stone Rd, Niagara-On-The-Lake, ON L0S 1J0
+74	1339 Lakeshore Rd, Niagara-On-The-Lake, ON L0S 1J0
+75	1425 Lakeshore Rd, Niagara-On-The-Lake, ON L0S 1J0
+76	3955 Cherry Ave, Lincoln, ON L0R 1B1
+77	4890 Victoria Ave N, Lincoln, ON L0R 2E0
+78	4556 Lincoln Ave, Lincoln, ON L0R 1B3
+79	4043 Mountainview Rd, Lincoln, ON L0R 1B2
+80	4281 Mountainview Rd, Lincoln, ON L0R 1B2
+81	4245 King St, Lincoln, ON L0R1B1
+82	400 Main St W, Grimsby, ON L3M 1T2
+83	3620 Moyer Rd, Lincoln, ON L0R 2C0
+84	4817 Lincoln Ave N, Lincoln, ON L0R 1B3
+85	4045 John St, Lincoln, ON L0R 1B1
+86	3751 King St, Lincoln, ON L0R 2C0
+87	1625 Haist St, Pelham, ON L0S 1E0
+88	50 Market Lane, Welland, ON L3B 3X4
+89	1724 Pelham St N, Pelham, ON L0S 1E6
+90	4198 King St W, Lincoln, ON L0R 1B1
+91	905 Canborough Rd, Pelham, ON L0S 1C0
