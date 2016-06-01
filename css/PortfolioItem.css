@@ -8,23 +8,43 @@ html,
 body {
     height: 80%;
 }
-
+.carousel { 
+	height: 100%;
+}
 .portfolio-item {
     margin-bottom: 25px;
 }
-
+header { 
+	padding-top: 25px;
+}
 .item,
+.active,
 .carousel-inner {
     height: 100%;
-	color: rgb(179, 230, 255);
 }
 
-.hero-spacer {
-    margin-top: 0px;
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 80%px;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
-.hero-feature {
-    margin-bottom: 30px;
+p {
+	padding-left: 5px;
+}
+
+h3 {
+	padding-left: 5px;
+}
+
+h2 { 
+	color:black;
 }
 
 .navbar-fixed-top .nav {
@@ -70,6 +90,7 @@ header	{
 
 .container h1 {
 	font-size: 3.5em;
+	padding-top:70px;
 }
 
 /* Map */

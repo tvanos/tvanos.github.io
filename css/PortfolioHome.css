@@ -1,20 +1,15 @@
 ﻿html,
 body {
     height: 100%;
-	background: url("../images/Canada_Snip.PNG") no-repeat center center fixed;
+	background: url("../images/Canada_Full.PNG") no-repeat center center fixed;
     -webkit-background-size: cover;
 }
 
 /* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
-.carousel {
-    height: 50%;
-	margin-left: 5PX;
-	margin-right: 5px;
-	}
-ul{ 
-	margin-bottom: -23px;
-}
-	
+
+hr {
+    margin-top: -13px;
+}	
 .iframe-nav {
 	color: white;
     padding: 0;
@@ -113,12 +108,21 @@ a:focus, a:hover {
 	text-align: center;
 }	
 .container h1 {
-	color: rgb(179, 250, 255);
+	color: white;
 	font-size: 3.5em;
+	padding-top: 70px;
 }
 .container h3{ 
 	color: rgb(179, 230, 255);
 }
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
 
 .fill {
     width: 100%;
