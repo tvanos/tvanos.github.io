@@ -138,12 +138,6 @@ a:focus, a:hover {
 	opacity: 0.1;
 }
 
-.small{
-	
-	text-align: center;
-	color: rgb(109, 209, 224);
-}
-
 /* Map */
 
 .map {
@@ -163,7 +157,11 @@ a:focus, a:hover {
 	color: rgb(109, 209, 224);
 }
 
+.list-inline  li{
+	color:black;
+}
+
 footer {
     padding: 100px 0;
-	color: white;
+	color: rgb(109, 209, 224);
 }
