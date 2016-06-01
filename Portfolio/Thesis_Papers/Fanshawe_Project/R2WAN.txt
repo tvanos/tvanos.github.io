@@ -1,0 +1,44 @@
+Enable
+Config t
+Hostname R2WAN
+Banner motd #This router is being used for Equilibrium Consulting’s network simulation, AUTHORIZED ACCESS ONLY! If you have any questions please contact Chris Lageer at c_lageer@fanshawec.ca or Travis Vanos at travis.vanos@gmail.com#
+No ip domain-lookup
+Enable secret Windows1
+Line con 0
+Logging sync
+Password Windows1
+login
+Line vty 0 4
+Password Windows1
+Login
+Exit
+Service password-encryption
+
+
+int s0/0
+description WAN to R2wan.Sydney
+ip address 172.16.2.1 255.255.255.252
+clock rate 64000
+no shut
+
+int s0/1
+description WAN to R2wan.Toowoomba
+ip address 172.16.2.5 255.255.255.252
+clock rate 64000
+no shut
+
+int fa0/0
+description R2WAN to R1WAN
+ip address 172.16.0.2 255.255.255.252
+no shut
+
+router eigrp 1
+redistribute static
+network 172.16.2.0 0.0.0.3
+network 172.16.2.4 0.0.0.3
+network 172.16.0.0 0.0.0.3
+no auto-summary
+exit
+
+ip route 0.0.0.0 0.0.0.0 s0/0
+ip route 0.0.0.0 0.0.0.0 s0/1

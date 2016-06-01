@@ -1,0 +1,57 @@
+Enable
+Config t
+Hostname R2INT
+Banner motd #This router is being used for Equilibrium Consulting’s network simulation, AUTHORIZED ACCESS ONLY! If you have any questions please contact Chris Lageer at c_lageer@fanshawec.ca or Travis Vanos at travis.vanos@gmail.com#
+No ip domain-lookup
+Enable secret Windows1
+Line con 0
+Logging sync
+Password Windows1
+login
+Line vty 0 4
+Password Windows1
+Login
+Exit
+Service password-encryption
+
+Int s0/0/0
+Description R2INT to R2int.Sydney
+Ip address 209.211.10.6 255.255.255.252
+Clock rate 64000
+No shut
+
+Int s0/0/1
+Description R2INT to R1INT
+Ip address 209.211.10.10 255.255.255.252
+No shut
+
+Int fa0/0
+Description to Fanshawe internet
+Ip address dhcp
+No shut
+
+Int fa0/1
+Description for OpenVPN client
+Ip address 209.211.11.253 255.255.255.0
+No shut
+
+Ip route 0.0.0.0 0.0.0.0 fa0/0
+Ip route 10.0.0.0 255.0.0.0 s0/0/0
+
+access-list 101 permit tcp any host 10.10.70.8
+access-list 101 permit udp any host 10.10.70.8
+access-list 120 permit ip any any
+
+ip nat inside source list 120 interface fa0/0 overload
+
+int fa0/0
+ip nat outside
+int fa0/1
+ip access-group 101 in
+ip nat inside
+int s0/0/1
+ip nat inside
+int s0/0/0
+ip nat inside
+
+####OpenVPN client should manually set ip to 209.211.11.100/24 with default GW 209.211.10.253###

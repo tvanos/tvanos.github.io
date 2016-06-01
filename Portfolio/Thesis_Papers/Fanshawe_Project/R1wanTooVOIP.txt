@@ -1,0 +1,136 @@
+telephony-service
+system meesage Chavhoj Toowoomba
+no auto-reg-ephone
+load 
+max-ephones 2
+max-dn 10
+ip source-address 10.20.0.5 port 2000
+
+ephone-hunt 1 sequential
+pilot 2300
+list 2301 2302
+timeout 10
+final 2303
+
+moh music-on-hold.au
+multicast moh 239.20.130.1 port 2000
+
+ephone-dn 1
+name Sales1
+number 2301
+
+ephone-dn 2
+name Sales2
+number 2302
+
+ephone-dn 3
+name SalesHunt
+number 2300
+
+ephone-dn 4
+name SalesVoice
+number 2303
+
+ephone-dn 5
+name Intercom Sales2
+number A2301
+intercom A2302
+
+ephone-dn 6
+name Intercom Sales1
+number A2302
+intercom A2301
+
+ephone-dn 3
+number 2399
+name Sales Parking
+park-slot
+
+ephone 1
+mac-address 
+button 1:1 2:5
+
+ephone 2
+mac-address
+button 1:2 2:6
+
+voice-port 0/0/0
+cptone AU
+caller-id enable
+station-id number 911
+station-id name Emergency
+dial-peer voice 1 pots
+destination-pattern 911
+port 0/0/0
+dial-peer voice 2 pots
+destination-pattern 9911
+forward-digits 3
+port 0/0/0
+
+dial-peer voice 3 voip
+destination-pattern 1...
+preference 0
+no digit-strip
+session target ipv4:10.10.0.5
+codec g711alaw
+dial-peer voice 4 voip
+destination-pattern 91...
+preference 0
+no digit-strip
+forward-digits 4
+session target ipv4:10.10.0.5
+codec g7111alaw
+
+dial-peer voice 5 pots
+destination-pattern 1...
+port s0/1/0:23
+preference 1
+prefix 1555XXX
+dtmf-relay h245-alphanumeric
+
+dial-peer voice 6 voip
+destination-pattern 1555XXXX
+no digit-strip
+forward-digits 4
+session target ipv4:10.20.0.5
+
+exit
+config t
+card type t1 0 1
+network-clock-participate wic 1
+isdn switch-type primary-ni
+isdn voice-call-failure 0
+controller t1 0/1/0
+description T1 Voice
+framing esf
+linecode b8zs
+pri-group timeslots 1-4,24
+int s0/1/0:23
+decription ISDN PRI to Adtran-T1 switch
+no ip address
+no ip redirects
+encapsulation hdlc
+isdn switch-type primary-ni
+isdn incoming-voice voice
+isdn supp-service name calling
+no cdp enable
+
+voice service voip
+allow-connections sip to sip
+no supplementary-service sip moved-temporarily
+
+telephony-service
+voicemail 2303
+
+dial-peer voice 103 voip
+description Admin Voicemail Pilot
+max-conn 1
+destination-pattern 2303
+session protocol sipv2
+session target ipv4:10.10.70.251
+dtmf-relay rtp-nte
+codec g7111ulaw
+no vad
+
+sip-ua
+mwi-server ipv4:10.10.70.251 expires 3600 port 5060 transport udp unsolicited

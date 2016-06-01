@@ -1,0 +1,245 @@
+Enable
+Config t
+Hostname D2.Toowoomba
+Banner motd #This switch is being used for Equilibrium Consulting’s network simulation, AUTHORIZED ACCESS ONLY! If you have any questions please contact Chris Lageer at c_lageer@fanshawec.ca or Travis Vanos at travis.vanos@gmail.com#
+No ip domain lookup
+Enable secret Windows1
+Line con 0
+Logging sync
+Password Windows1
+login
+Line vty 0 4
+Password Windows1
+Login
+Exit
+Service password-encryption
+Ip routing
+Key chain chavhoj
+Key 1
+Key-string eqcon
+
+Spanning-tree mode rapid-pvst
+
+Vlan 5
+Name MGMT
+Vlan 10
+Name Admin
+Vlan 20
+Name Office
+Vlan 30
+Name Sales
+Vlan 40
+Name Finance
+Vlan 70
+Name Servers
+Vlan 80
+Name Wireless
+Vlan 90
+Name GuestWireless
+Vlan 110
+Name AdminVoice
+Vlan 120
+Name OfficeVoice
+Vlan 130
+Name SalesVoice
+Vlan 140
+Name FinanceVoice
+Vlan 150
+Name HRVoice
+Vlan 160
+Name ITVoice
+Vlan 200
+Name Native
+Vlan 999
+Name Blackhole
+
+Int vlan 5
+Ip address 10.20.5.253 255.255.255.0
+Standby 5 authentication md5 key-chain chavhoj
+Standby 5 ip 10.20.5.254
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 10
+Ip address 10.20.10.253 255.255.255.0
+Standby 10 authentication md5 key-chain chavhoj
+Standby 10 ip 10.20.10.254
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 20
+Ip address 10.20.20.253 255.255.255.0
+Standby 20 authentication md5 key-chain chavhoj
+Standby 20 ip 10.20.20.254
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 30
+Ip address 10.20.30.253 255.255.255.0
+Standby 30 authentication md5 key-chain chavhoj
+Standby 30 ip 10.20.30.254
+Standby 30 priority 200
+Standby 30 preempt
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 40
+Ip address 10.20.40.253 255.255.255.0
+Standby 40 authentication md5 key-chain chavhoj
+Standby 40 ip 10.20.40.254
+Standby 40 priority 200
+Standby 40 preempt
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 70
+Ip address 10.20.70.253 255.255.255.0
+Standby 70 authentication md5 key-chain chavhoj
+Standby 70 ip 10.20.70.254
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 80
+Ip address 10.20.80.253 255.255.255.0
+Standby 80 authentication md5 key-chain chavhoj
+Standby 80 ip 10.20.80.254
+Standby 80 priority 200
+Standby 80 preempt
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 90
+Ip address 10.20.90.253 255.255.255.0
+Standby 90 authentication md5 key-chain chavhoj
+Standby 90 ip 10.20.90.254
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 110
+Ip address 10.20.110.253 255.255.255.0
+Standby 110 authentication md5 key-chain chavhoj
+Standby 110 ip 10.20.110.254
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 120
+Ip address 10.20.120.253 255.255.255.0
+Standby 120 authentication md5 key-chain chavhoj
+Standby 120 ip 10.20.120.254
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 130
+Ip address 10.20.130.253 255.255.255.0
+Standby 130 authentication md5 key-chain chavhoj
+Standby 130 ip 10.20.130.254
+Standby 130 priority 200
+Standby 130 preempt
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 140
+Ip address 10.20.140.253 255.255.255.0
+Standby 140 authentication md5 key-chain chavhoj
+Standby 140 ip 10.20.140.254
+Standby 140 priority 200
+Standby 140 preempt
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 150
+Ip address 10.20.150.253 255.255.255.0
+Standby 150 authentication md5 key-chain chavhoj
+Standby 150 ip 10.20.150.254
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int vlan 160
+Ip address 10.20.160.253 255.255.255.0
+Standby 160 authentication md5 key-chain chavhoj
+Standby 160 ip 10.20.160.254
+Standby 160 priority 200
+Standby 160 preempt
+Ip helper-address 10.10.70.2
+Ip helper-address 10.40.70.2
+No shut
+
+Int range fa0/1-24
+Switchport port-security mac-address sticky
+Switchport port-security violation shutdown
+
+Spanning-tree vlan 30 root primary
+Spanning-tree vlan 40 root primary
+Spanning-tree vlan 60 root primary
+Spanning-tree vlan 80 root primary
+Spanning-tree vlan 140 root primary
+Spanning-tree vlan 160 root primary
+
+Int range fa0/5-6
+Spanning-tree portfast
+Int range fa0/8-24
+Spanning-tree portfast
+exit
+
+int fa0/1
+channel-group 1 mode desirable
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no ip address
+
+int fa0/2
+channel-group 1 mode desirable
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no ip address
+
+int fa0/3
+channel-group 5 mode desirable
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no ip address
+
+int fa0/4
+channel-group 5 mode desirable
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no ip address
+
+Int fa0/7
+no switchport
+Description D2.Toowoomba to R2wan.Toowoomba
+Ip address 10.20.1.6 255.255.255.252
+ip authentication mode eigrp 1 md5
+ip authentication key-chain eigrp 1 chavhoj
+No shut
+
+Router eigrp 1
+passive-interface default
+no passive-interface int fa0/7
+Network 10.20.0.0 0.0.255.255
+No auto-summary
+
+int vlan 1
+ip address 10.20.4.3 255.255.255.0
+no shut
+
+int po1
+switchport mode trunk
+switchport trunk native vlan 1
+
+int po5
+switchport mode trunk
+switchport trunk native vlan 1

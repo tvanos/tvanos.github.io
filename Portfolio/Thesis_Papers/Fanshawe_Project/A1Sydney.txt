@@ -1,0 +1,103 @@
+Enable
+Config t
+Hostname A1.Sydney
+Banner motd #This switch is being used for Equilibrium Consulting’s network simulation, AUTHORIZED ACCESS ONLY! If you have any questions please contact Chris Lageer at c_lageer@fanshawec.ca or Travis Vanos at travis.vanos@gmail.com#
+No ip domain lookup
+Enable secret Windows1
+Line con 0
+Logging sync
+Password Windows1
+login
+Line vty 0 4
+Password Windows1
+Login
+Exit
+ip routing
+Service password-encryption
+
+Spanning-tree portfast bpduguard default
+Spanning-tree mode rapid-pvst
+
+Vlan 5
+Name MGMT
+Vlan 10
+Name Admin
+Vlan 20
+Name Office
+Vlan 30
+Name Sales
+Vlan 40
+Name Finance
+Vlan 50
+Name HR
+Vlan 60
+Name IT
+Vlan 70
+Name Servers
+Vlan 80
+Name Wireless
+Vlan 90
+Name GuestWireless
+Vlan 110
+Name AdminVoice
+Vlan 120
+Name OfficeVoice
+Vlan 130
+Name SalesVoice
+Vlan 140
+Name FinanceVoice
+Vlan 150
+Name HRVoice
+Vlan 160
+Name ITVoice
+Vlan 200
+Name Native
+Vlan 999
+Name Blackhole
+
+Int range fa0/1-24
+power inline auto
+Switchport port-security mac-address sticky
+Switchport port-security violation shutdown
+
+Int range fa0/5-24
+Spanning-tree portfast
+Errdisable Recovery cause bpduguard
+Errdisable recovery interval 600
+exit
+config t
+int fa0/1
+channel-group 4 mode desirable
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no ip address
+
+int fa0/2
+channel-group 4 mode desirable
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no ip address
+
+int fa0/3
+channel-group 5 mode desirable
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no ip address
+
+int fa0/4
+channel-group 5 mode desirable
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no ip address
+
+int vlan 1
+ip address 10.10.4.1 255.255.255.0
+no shut
+
+int po4
+switchport mode trunk
+switchport trunk native vlan 1
+
+int po5
+switchport mode trunk
+switchport trunk native vlan 1

@@ -1,0 +1,48 @@
+Enable
+Config t
+Hostname R1int.Sydney
+Banner motd #This router is being used for Equilibrium Consulting’s network simulation, AUTHORIZED ACCESS ONLY! If you have any questions please contact Chris Lageer at c_lageer@fanshawec.ca or Travis Vanos at travis.vanos@gmail.com#
+No ip domain-lookup
+Enable secret Windows1
+Line con 0
+Logging sync
+Password Windows1
+login
+Line vty 0 4
+Password Windows1
+Login
+Exit
+Service password-encryption
+Key chain chavhoj
+Key 1
+Key-string eqcon
+
+
+Int s0/0/0
+Description R1int.Sydney to R1INT
+Ip address 209.211.10.1 255.255.255.0
+No shut
+
+Int fa0/0
+Description R1int.Sydney to D1.Sydney
+Ip address 10.10.0.9 255.255.255.252
+ip authentication mode eigrp 1 md5
+ip authentication key-chain eigrp 1 chavhoj
+No shut
+
+Int fa0/1
+Description R1int.Sydeny to R2int.Sydney
+Ip address 10.10.2.5 255.255.255.252
+ip authentication mode eigrp 1 md5
+ip authentication key-chain eigrp 1 chavhoj
+No shut
+
+Ip route 0.0.0.0 0.0.0.0 s0/0/0
+
+Router eigrp 1
+Passive-interface default
+No passive-interface fa0/0
+No passive-interface fa0/1
+Network 10.10.0.0 0.0.255.255
+Redistribute static
+No auto-summary

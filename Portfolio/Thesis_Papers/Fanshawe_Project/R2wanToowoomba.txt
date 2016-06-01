@@ -1,0 +1,96 @@
+Enable
+Config t
+Hostname R2wan.Toowoomba
+Banner motd #This router is being used for Equilibrium Consulting’s network simulation, AUTHORIZED ACCESS ONLY! If you have any questions please contact Chris Lageer at c_lageer@fanshawec.ca or Travis Vanos at travis.vanos@gmail.com#
+No ip domain-lookup
+Enable secret Windows1
+Line con 0
+Logging sync
+Password Windows1
+login
+Line vty 0 4
+Password Windows1
+Login
+Exit
+Service password-encryption
+Key chain chavhoj
+Key 1
+Key-string eqcon
+
+
+int s0/0/0
+description WAN to R2WAN
+ip address 172.16.2.6 255.255.255.252
+no shut
+
+int fa0/1
+description R2wan.Toowoomba to R1wan.Toowoomba
+ip address 10.20.2.2 255.255.255.252
+ip authentication mode eigrp 1 md5
+ip authentication key-chain eigrp 1 chavhoj
+no shut
+
+int fa0/0
+description R2wan.Toowoomba to D2.Toowoomba
+ip address 10.20.1.5 255.255.255.252
+ip authentication mode eigrp 1 md5
+ip authentication key-chain eigrp 1 chavhoj
+no shut
+
+router eigrp 1
+passive-interface default
+no passive-interface s0/0/0
+no passive-interface fa0/0
+no passive-interface fa0/1
+network 10.20.0.0 0.0.255.255
+network 172.16.2.4 0.0.0.3
+network 10.5.0.0 0.0.255.255
+no auto-summary
+
+int s0/0/0
+crypto isakmp policy 1
+encr 3des
+authentication pre-share
+crypto isakmp key eqcon1 address 172.16.1.2
+crypto ipsec transform-set chavhoj1 esp-3des esp-sha-hmac
+
+ip access-list extended vpn1
+permit gre host 172.16.2.6 host 172.16.1.2
+
+int s0/0/0
+crypto map chavhojvpn1 1 ipsec-isakmp
+set peer 172.16.1.2
+set transform-set chavhoj1
+match address vpn1
+
+int s0/0/0
+crypto map chavhojvpn1
+
+int tunnel1
+ip address 10.5.0.10 255.255.255.252
+tunnel source s0/0/0
+tunnel destination 172.16.1.2
+
+int s0/0/0
+crypto isakmp policy 2
+encr 3des
+authentication pre-share
+crypto isakmp key eqcon2 address 172.16.2.2
+crypto ipsec transform-set chavhoj2 esp-3des esp-sha-hmac
+
+ip access-list extended vpn2
+permit gre host 172.16.2.6 host 172.16.2.2
+
+int s0/0/0
+crypto map chavhojvpn2 2 ipsec-isakmp
+set peer 172.16.2.2
+set transform-set chavhoj2
+match address vpn2
+
+int s0/0/0
+crypto map chavhojvpn2
+
+int tunnel2
+ip address 10.5.0.14 255.255.255.252
+tunnel source s0/0/0
+tunnel destination 172.16.2.2
