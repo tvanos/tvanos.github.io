@@ -96,8 +96,8 @@ color: rgb(179, 230, 255);
 }
 
 .circular {
-	width: 200px;
-	height: 200px;
+	width: 192px;
+	height: 192px;
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
@@ -110,8 +110,8 @@ color: rgb(179, 230, 255);
 	}
 	
 .circular:hover{
-	width: 200px;
-	height: 200px;
+	width: 192px;
+	height: 192px;
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
