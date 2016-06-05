@@ -1,0 +1,134 @@
+/*!
+ * Start Bootstrap - Portfolio Item HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+html,
+body {
+    height: 80%;
+}
+
+.container { 
+	width: 100%;
+}
+.carousel { 
+	padding-top: 35px;
+	height: 100%;
+	width: 100%;
+	max-width:900px !important;
+}
+.portfolio-item {
+    margin-bottom: 25px;
+}
+header { 
+	padding-top: 25px;
+}
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+	color: rgb(179, 230, 255);
+	width: 100%;
+	max-width:1080px !important;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 80%px;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+p {
+	padding-left: 5px;
+}
+
+h3 {
+	padding-left: 5px;
+	padding-left: -15px;
+}
+
+h2 { 
+	color:black;
+	padding-left: -15px;
+	margin-bottom:0px;
+}
+
+.navbar-fixed-top .nav {
+    padding: 5px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+.landingPagePic.resize{ 
+	width:50px;
+	height:auto;
+}
+.landingPagePic {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 42px;
+	height: 42px;
+	border-radius: 38px;
+	-webkit-border-radius: 38px;
+	-moz-border-radius: 38px;
+	background: url(../images/Travis_Vanos_Small.png) no-repeat;
+	margin-left: auto;
+    margin-right: auto;
+	}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 10px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+		margin-left: 25PX;
+		margin-right: 25px;
+    }
+}
+header	{
+	
+	height: 100%;
+}
+
+.container h1 {
+	font-size: 3.5em;
+	padding-top:70px;
+}
+
+/* Map */
+
+.map {
+    height: 500px;
+}
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
+.list-inline {
+	color:black;
+}
+
+/* Footer */
+.small{
+	
+	Text-align: center;
+
+}
+}
+footer {
+	color:black;
+    margin: 50px 0;
+}
