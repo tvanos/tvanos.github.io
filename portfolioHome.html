@@ -22,7 +22,12 @@
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	
 	<!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery.js">
+			function alertsize(pixels){
+			pixels+=32;
+			document.getElementById('myframe').style.height=pixels+"px";
+			}
+		</script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -36,11 +41,8 @@
 		});
     </script>
 	<script>
-		function alertsize(pixels){
-			pixels+=32;
-			document.getElementById('myframe').style.height=pixels+"px";
-		}
-</script>
+		
+	</script>
 </head>
 
 <body>
